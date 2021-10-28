@@ -1,0 +1,13 @@
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Employee.DataService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Employee.DataService.AssemblyInfoInputs.cache
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Employee.DataService.AssemblyInfo.cs
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Employee.DataService.csproj.CoreCompileInputs.cache
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\bin\Debug\netcoreapp3.1\Employee.DataService.deps.json
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\bin\Debug\netcoreapp3.1\Employee.DataService.runtimeconfig.json
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\bin\Debug\netcoreapp3.1\Employee.DataService.runtimeconfig.dev.json
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\bin\Debug\netcoreapp3.1\Employee.DataService.dll
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\bin\Debug\netcoreapp3.1\Employee.DataService.pdb
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Employee.DataService.dll
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Employee.DataService.pdb
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Employee.DataService.genruntimeconfig.cache
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Employee.DataService.csproj.AssemblyReference.cache
