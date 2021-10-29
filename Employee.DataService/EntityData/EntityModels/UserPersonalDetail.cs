@@ -18,6 +18,7 @@ namespace DataService.EntityData.EntityModels
         public int CreatedBy { get; set; }
         public DateTime? ChangedOn { get; set; }
         public int? ChangedBy { get; set; }
+        public int Id { get; set; }
 
         public virtual Employee Emp { get; set; }
         public virtual User User { get; set; }

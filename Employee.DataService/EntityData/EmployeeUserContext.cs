@@ -156,7 +156,8 @@ namespace DataService.EntityData
 
             modelBuilder.Entity<UserPersonalDetail>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasIndex(e => e.UserId, "UQ__UserPers__CB9A1CFEF4A09DAE")
+                    .IsUnique();
 
                 entity.Property(e => e.ChangedBy).HasColumnName("changedBy");
 
@@ -201,13 +202,13 @@ namespace DataService.EntityData
                 entity.Property(e => e.UserId).HasColumnName("userId");
 
                 entity.HasOne(d => d.Emp)
-                    .WithMany()
+                    .WithMany(p => p.UserPersonalDetails)
                     .HasForeignKey(d => d.EmpId)
                     .HasConstraintName("FK__UserPerso__empId__36B12243");
 
                 entity.HasOne(d => d.User)
-                    .WithMany()
-                    .HasForeignKey(d => d.UserId)
+                    .WithOne(p => p.UserPersonalDetail)
+                    .HasForeignKey<UserPersonalDetail>(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__UserPerso__userI__35BCFE0A");
             });

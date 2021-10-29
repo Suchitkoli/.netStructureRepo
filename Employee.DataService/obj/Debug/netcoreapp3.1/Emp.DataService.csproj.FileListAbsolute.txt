@@ -1,0 +1,5 @@
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Emp.DataService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Emp.DataService.AssemblyInfoInputs.cache
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Emp.DataService.AssemblyInfo.cs
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Emp.DataService.csproj.CoreCompileInputs.cache
+C:\Users\Suchit\source\repos\WebApplication5\Employee.DataService\obj\Debug\netcoreapp3.1\Emp.DataService.csproj.AssemblyReference.cache

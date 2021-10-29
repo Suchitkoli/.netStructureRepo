@@ -26,5 +26,12 @@ namespace WebApplication5.Controllers.UserPersonalDetails
             var result = await _userPersonalDetailsManager.GetUsersPersonalDetails();
             return result;
         }
+
+        [HttpPut]
+        public async Task<bool> CreateCreateUsers(UserPersonalDetailsDTO usersDTO)
+        {
+            var res = await _userPersonalDetailsManager.CreateUsersPersonalDetails(usersDTO);
+            return res;
+        }
     }
 }

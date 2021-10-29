@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 namespace WebApplication5.Controllers.User
 {
     [Route("Users")]
+    [ApiController]
     public class UserController : Controller
     {
         private readonly UsersManager _usersManager;
@@ -26,10 +27,10 @@ namespace WebApplication5.Controllers.User
             var result = await _usersManager.GetUsers();
             return result;
        }
-    [HttpPost]
+    [HttpPut]
         public async Task<bool> CreateCreateUsers(UsersDTO usersDTO)
         {
-            var res = await _usersManager.CreateUsers(usersDTO);
+             var res = await _usersManager.CreateUsers(usersDTO);
             return res;
         }
     }

@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication5", "WebApplication5\WebApplication5.csproj", "{78ED0EE5-813F-4751-ACCD-0A6D3C15B1A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee.DataService", "Employee.DataService\Employee.DataService.csproj", "{D4CEBCF2-772C-412F-92C2-F59C8A75B1FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employee.DataService", "Employee.DataService\Employee.DataService.csproj", "{D4CEBCF2-772C-412F-92C2-F59C8A75B1FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee.Manager", "Employee.Manager\Employee.Manager.csproj", "{3AC63058-B5A0-4D2A-8D80-E2E7558027EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employee.Manager", "Employee.Manager\Employee.Manager.csproj", "{3AC63058-B5A0-4D2A-8D80-E2E7558027EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

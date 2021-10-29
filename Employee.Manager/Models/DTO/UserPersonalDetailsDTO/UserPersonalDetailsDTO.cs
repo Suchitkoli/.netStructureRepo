@@ -7,6 +7,8 @@ namespace Employee.Manager.Models.DTO.UserDTO
 {
     public class UserPersonalDetailsDTO
     {
+        public int Id { get; set; }
+        public int UserId { get; set; }
         public string Fname { get; set; }
         public string Mname { get; set; }
         public string Lname { get; set; }
@@ -16,6 +18,8 @@ namespace Employee.Manager.Models.DTO.UserDTO
         {
             var res = new UserPersonalDetailsDTO
             {
+                Id = userPersonalDetail.Id,
+                UserId = userPersonalDetail.UserId,
                 Fname = userPersonalDetail.Fname,
                 Mname = userPersonalDetail.Mname,
                 Lname = userPersonalDetail.Lname,
@@ -27,6 +31,7 @@ namespace Employee.Manager.Models.DTO.UserDTO
         {
             return new UserPersonalDetail
             {
+                UserId=userPersonalDetailsDTO.UserId,
                 Fname = userPersonalDetailsDTO.Fname,
                 Mname = userPersonalDetailsDTO.Mname,
                 Lname = userPersonalDetailsDTO.Lname,

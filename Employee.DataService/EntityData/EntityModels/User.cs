@@ -21,7 +21,9 @@ namespace DataService.EntityData.EntityModels
         public int CreatedBy { get; set; }
         public DateTime? ChangedOn { get; set; }
         public int? ChangedBy { get; set; }
+
         public virtual Employee Employee { get; set; }
+        public virtual UserPersonalDetail UserPersonalDetail { get; set; }
         public virtual ICollection<UserMessage> UserMessages { get; set; }
     }
 }

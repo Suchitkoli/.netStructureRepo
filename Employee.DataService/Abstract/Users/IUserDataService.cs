@@ -8,8 +8,10 @@ namespace DataService.Abstract.Users
 {
     public interface IUserDataService
     {
+        Task<User> GetUsersById(long id);
         Task<List<User>> GetUsers();
 
-        Task<bool> CreateUsers(User user);
+        Task<User> CreateUsers(User user);
+        Task<User> UpdateUserAsync(User user);
     }
 }

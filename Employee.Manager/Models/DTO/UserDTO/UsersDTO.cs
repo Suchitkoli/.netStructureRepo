@@ -11,6 +11,8 @@ namespace Employee.Manager.Models
         public int Id { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
+        public UserPersonalDetailsDTO UserPersonalDetails { get; set; }
+
         public static UsersDTO MapToDTO(User user)
         {
             var result = new UsersDTO
@@ -18,30 +20,15 @@ namespace Employee.Manager.Models
                 Id = user.Id,
                 Username = user.Username,
                 Email = user.Email,
-
+                
             };
+
+            if (user.UserPersonalDetail != null)
+            {
+                result.UserPersonalDetails = UserPersonalDetailsDTO.MapToDTO(user.UserPersonalDetail);
+            }
+
             return result;
         }
-        public static User MapToEntity(UsersDTO usersDTO)
-        {
-            return new User
-            {
-                Id = usersDTO.Id,
-                Username = usersDTO.Username,
-                Email = usersDTO.Email,
-                FirstLoggedIn= DateTime.UtcNow,
-                IsDisable=false,
-                ChangedBy = null,
-                ChangedOn = null,
-                CreatedBy = 3,
-                CreatedOn = DateTime.UtcNow
-
-            };
-        }
-
-
-
-
-
     }
 }

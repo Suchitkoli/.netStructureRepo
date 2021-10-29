@@ -18,6 +18,12 @@ namespace Employee.Manager.Managers.UserPersonalDetails
         {
             _userPersonalDetailsServices = userPersonalDetailsServices;
         }
+
+        public async Task<bool> CreateUsersPersonalDetails(UserPersonalDetailsDTO userPersonalDetailsDTO)
+        {
+
+            return await _userPersonalDetailsServices.CreateUsersPersonalDetails(UserPersonalDetailsDTO.MapToEntity(userPersonalDetailsDTO));
+        }
         public async Task<List<UserPersonalDetailsDTO>> GetUsersPersonalDetails()
         {
             var res = await _userPersonalDetailsServices.GetUsersPersonalDetails();
