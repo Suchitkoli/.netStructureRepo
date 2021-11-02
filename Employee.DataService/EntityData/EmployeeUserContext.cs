@@ -68,6 +68,7 @@ namespace DataService.EntityData
                 entity.HasOne(d => d.User)
                     .WithOne(p => p.Employee)
                     .HasForeignKey<Employee>(d => d.Userid)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__Employee__userid__30F848ED");
             });
 
@@ -209,7 +210,7 @@ namespace DataService.EntityData
                 entity.HasOne(d => d.User)
                     .WithOne(p => p.UserPersonalDetail)
                     .HasForeignKey<UserPersonalDetail>(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__UserPerso__userI__35BCFE0A");
             });
 

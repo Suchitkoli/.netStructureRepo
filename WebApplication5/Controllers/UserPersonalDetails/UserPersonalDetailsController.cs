@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 namespace WebApplication5.Controllers.UserPersonalDetails
 {
     [Route("UserPersonalDetails")]
+     [ApiController]
     public class UserPersonalDetailsController : Controller
     {
          private readonly UserPersonalDetailsManager _userPersonalDetailsManager;
@@ -27,11 +28,26 @@ namespace WebApplication5.Controllers.UserPersonalDetails
             return result;
         }
 
+        [HttpGet("{id}")]
+        public async Task<UserPersonalDetailsDTO> GetUserPersonalDetailsById(long id)
+        {
+            var result = await _userPersonalDetailsManager.GetUserPersonalDetailsById(id);
+            return result;
+        }
+
         [HttpPut]
-        public async Task<bool> CreateCreateUsers(UserPersonalDetailsDTO usersDTO)
+        public async Task<UserPersonalDetailsDTO> CreateUsersPersonalDetails(UserPersonalDetailsDTO usersDTO)
         {
             var res = await _userPersonalDetailsManager.CreateUsersPersonalDetails(usersDTO);
             return res;
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<bool> DeleteUserPersonalDetails(long id)
+        {
+            var res = await _userPersonalDetailsManager.DeleteUserPersonalDetails(id);
+            return res;
+
         }
     }
 }

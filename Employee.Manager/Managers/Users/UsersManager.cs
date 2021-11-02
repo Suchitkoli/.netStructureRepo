@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataService.EntityData.EntityModels;
+using Employee.Manager.Managers.UserPersonalDetails;
 
 namespace Employee.Manager.Managers.Users
 {
@@ -14,9 +15,12 @@ namespace Employee.Manager.Managers.Users
     {
         private readonly IUserDataService _usersDataService;
 
-        public UsersManager(IUserDataService userDataService)
+        private readonly UserPersonalDetailsManager _userPersonalDetailsManager;
+
+        public UsersManager(IUserDataService userDataService,UserPersonalDetailsManager userPersonalDetailsManager)
         {
             _usersDataService = userDataService;
+            _userPersonalDetailsManager = userPersonalDetailsManager;
         }
 
         public async Task<List<UsersDTO>> GetUsers()
@@ -27,7 +31,21 @@ namespace Employee.Manager.Managers.Users
                 .ToList();
             return response;
         }
-        public async Task<bool> CreateUsers(UsersDTO usersDTO)
+        
+        public async Task<bool> DeleteUser(long id)
+        {
+
+            var res = await _usersDataService.DeleteUser(id);
+
+            return res;
+        }
+
+        public async Task<UsersDTO>GetUsersByID(long id)
+        {
+            var res = await _usersDataService.GetUsersById(id);
+            return UsersDTO.MapToDTO(res);
+        }
+        public async Task<UsersDTO> CreateUsers(UsersDTO usersDTO)
         {
             var isNew = usersDTO.Id == 0;
 
@@ -36,6 +54,7 @@ namespace Employee.Manager.Managers.Users
             if (!isNew)
             {
                 user = await _usersDataService.GetUsersById(usersDTO.Id);
+
             }
 
             user.Username = usersDTO.Username;
@@ -51,10 +70,13 @@ namespace Employee.Manager.Managers.Users
             {
                 await _usersDataService.UpdateUserAsync(user);
             }
-
-            usersDTO.UserPersonalDetails.UserId = user.Id;
-
-            return true;
+            if (usersDTO.UserPersonalDetails != null) {
+                usersDTO.UserPersonalDetails.UserId = user.Id;
+                await _userPersonalDetailsManager.CreateUsersPersonalDetails(usersDTO.UserPersonalDetails);
+              
+            }
+            
+            return UsersDTO.MapToDTO(user);
 
         }
 

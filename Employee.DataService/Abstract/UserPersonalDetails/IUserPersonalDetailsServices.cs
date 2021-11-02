@@ -11,5 +11,10 @@ namespace DataService.Abstract.UserPersonalDetails
         Task<List<UserPersonalDetail>> GetUsersPersonalDetails();
 
         Task<bool> CreateUsersPersonalDetails(UserPersonalDetail userPersonalDetails);
+
+        Task<UserPersonalDetail> GetUserPersonalDetailsById(long Id);
+
+        Task<bool> DeleteUserPersonalDetails(long id);
+        Task<UserPersonalDetail> UpdateUserPersonalDetailsAsync(UserPersonalDetail userPersonalDetails);
     }
 }

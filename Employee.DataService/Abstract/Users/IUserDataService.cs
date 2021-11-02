@@ -13,5 +13,7 @@ namespace DataService.Abstract.Users
 
         Task<User> CreateUsers(User user);
         Task<User> UpdateUserAsync(User user);
+
+        Task<bool> DeleteUser(long id);
     }
 }

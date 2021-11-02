@@ -41,6 +41,26 @@ namespace DataService.Services.Users
             return user;
         }
 
+        public async Task<bool> DeleteUser(long id)
+        {
+            var del = await _context.UserPersonalDetails
+                .FirstOrDefaultAsync(e => e.UserId == id);
+
+            var res = await _context.Users
+                .FirstOrDefaultAsync(e => e.Id == id);
+
+            
+
+            if (res != null && del !=null)
+            {
+                _context.UserPersonalDetails.Remove(del);
+                _context.Users.Remove(res);
+                await _context.SaveChangesAsync();
+               
+            }
+            return true;
+        }
+
         public async Task<User> GetUsersById(long id)
         {
             var res = await _context.Users
