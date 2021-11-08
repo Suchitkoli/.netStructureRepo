@@ -10,4 +10,3 @@ C:\Users\Suchit\source\repos\WebApplication5\Employee.Manager\bin\Debug\netcorea
 C:\Users\Suchit\source\repos\WebApplication5\Employee.Manager\obj\Debug\netcoreapp3.1\Employee.Manager.csproj.AssemblyReference.cache
 C:\Users\Suchit\source\repos\WebApplication5\Employee.Manager\obj\Debug\netcoreapp3.1\Employee.Manager.dll
 C:\Users\Suchit\source\repos\WebApplication5\Employee.Manager\obj\Debug\netcoreapp3.1\Employee.Manager.pdb
-C:\Users\Suchit\source\repos\WebApplication5\Employee.Manager\obj\Debug\netcoreapp3.1\Employee.Manager.csproj.CopyComplete

@@ -22,6 +22,7 @@ namespace DataService.Services.Users
 
         public async Task<User> CreateUsers(User user)
         {
+            
             user.IsDisable = false;
             user.CreatedBy = 3;
             user.CreatedOn = DateTime.UtcNow;

@@ -19,7 +19,8 @@ namespace Employee.Manager.Models
             {
                 Id = user.Id,
                 Username = user.Username,
-                Email = user.Email, 
+                Email = user.Email,
+                
             };
 
             if (user.UserPersonalDetail != null)
